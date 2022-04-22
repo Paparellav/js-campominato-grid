@@ -1,16 +1,16 @@
 // Generare una griglia di gioco quadrata in cui ogni cella contiene un numero compreso tra 1 e 100.
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
-const gridContainer = document.querySelector(".grid-container");
-gridContainer.innerHTML = "";
-console.log(gridContainer);
+
 
 const playButton = document.querySelector("button");
 playButton.addEventListener("click", function () {
+
+    const gridContainer = document.querySelector(".grid-container");
+    gridContainer.innerHTML = "";
+    
     for (let i = 1; i <= 100; i++) {
         const gridNumber = i;
-        // console.log(gridNumber);
-    
-    
+        
         //2. Creare un elemento html
         const newElement = document.createElement("div");
         // console.log(newElement);
@@ -28,8 +28,6 @@ playButton.addEventListener("click", function () {
         });
     
         // appendo questo elemnto al contenitore
-        gridContainer.append(newElement);
-    
-       
+        gridContainer.append(newElement);  
     }
 });
