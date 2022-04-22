@@ -70,14 +70,30 @@ footer div {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid white;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.grid-box span {
+.grid-box2 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid white;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-box3 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .active {

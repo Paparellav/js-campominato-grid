@@ -7,8 +7,21 @@ playButton.addEventListener("click", function () {
 
     const gridContainer = document.querySelector(".grid-container");
     gridContainer.innerHTML = "";
-    
-    for (let i = 1; i <= 100; i++) {
+
+    const difficults = document.getElementById("difficolta").value;
+    console.log(difficults);
+
+    let gridBoxes = 0;
+    if (difficults === "easy") {
+        gridBoxes = 100;
+    } else if (difficults === "medium") {
+        gridBoxes = 81;
+    } else if (difficults === "crazy") {
+        gridBoxes = 49;
+    }
+
+    for (let i = 1; i <= gridBoxes; i++) {
+
         const gridNumber = i;
         
         //2. Creare un elemento html
@@ -19,8 +32,14 @@ playButton.addEventListener("click", function () {
         newElement.innerHTML = `<span>${gridNumber}</span>`;
     
         //4. Assegnare la classe grid-box
-        newElement.classList.add("grid-box");
-
+        if (difficults === "easy") {
+            newElement.classList.add("grid-box");
+        } else if (difficults === "medium") {
+            newElement.classList.add("grid-box2");
+        } else if (difficults === "crazy") {
+            newElement.classList.add("grid-box3");
+        }
+        
         // aggiungo all'elmento appena creato la gestione del click
         
         newElement.addEventListener("click", function() {
