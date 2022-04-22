@@ -12,10 +12,34 @@ header {
 main {
     width: 100%;
     height: calc(100vh - 80px);
-}
-
-.grid-container {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #7fffd4;
 }
 
+.grid-container {
+    height: 520px;
+    width: 520px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-box {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-box span {
+    color: black;
+}
+
+.active {
+    background-color: #6495ed;
+}
